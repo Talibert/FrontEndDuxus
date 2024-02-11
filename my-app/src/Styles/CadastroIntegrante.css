@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 2vw;
+    border: 2px solid #a57d18;
+    border-radius: 1vw;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    align-items: center;
+  }
+  
+  /* Estilo para os rótulos */
+
+  form div {
+    width: 100%;
+  }
+
+  form label {
+    display: flex;
+    margin-bottom: 1vh;
+    width: 100%;
+  }
+  
+  /* Estilo para os campos de entrada */
+  form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #a57d18;
+    border-radius: 0.5vw;
+  }
+  
+  /* Estilo para o botão de envio */
+  form button {
+    background-color: #a57d18;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1vh;
+    border-radius: 4px;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+  /* Estilo para o botão de envio quando o cursor está sobre ele */
+  form button:hover {
+    background-color: #daa520;
+  }

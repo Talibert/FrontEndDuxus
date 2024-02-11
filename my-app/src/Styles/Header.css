@@ -1,5 +1,43 @@
 header {
-    width: 100vw;
-    height: 10vh;
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
 }
+
+header .top {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #daa520;
+    height: 1vh;
+}
+
+header .bot {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #daa520;
+    height: 1vh;
+}
+
+header .mid {
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .mid h1  {
+    padding-left: 2vw;
+    font-size: 5vh;
+    color: #a57d18;
+}
+
+header .mid img {
+    height: 100%;
+    padding-right: 2vw;
+}
+
+
+
