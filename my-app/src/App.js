@@ -5,6 +5,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CadastroIntegrante from "./components/CadastroIntegrante";
 import CadastroTime from "./components/CadastroTime";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/duxus/time/cadastro" element={<CadastroTime />} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }
