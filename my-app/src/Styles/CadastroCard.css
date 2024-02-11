@@ -1,6 +1,6 @@
 .link {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Usa a cor padrão do texto */
+    text-decoration: none;
+    color: inherit;
   }
 
 .card {

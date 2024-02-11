@@ -1,0 +1,46 @@
+.datatime .datainput {
+    margin-bottom: 1vh;
+    padding: 0.5em;
+    font-size: 16px;
+    border: 1px solid #a57d18;
+    border-radius: 4px;
+    outline: none;
+}
+
+.integrantestime {
+    height: 40vh;
+    overflow: auto;
+}
+
+.integrantestime .itens {
+    display: flex;
+    margin-bottom: 2vh;
+    cursor: pointer;
+    align-items: center;
+    padding: 0.5vw;
+    
+}
+
+.integrantestime .itens .customcheckbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #a57d18;
+    border-radius: 3px;
+    margin-right: 1vw;
+}
+
+.integrantestime .itens .checkboxitens {
+    display: none;
+}
+
+.customcheckbox::after {
+    content: "\2713";
+    font-size: 14px;
+    display: none;
+    padding-left: 3px;
+}
+
+input[type="checkbox"]:checked + .customcheckbox::after {
+    display: block;
+}

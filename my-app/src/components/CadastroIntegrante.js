@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../Styles/CadastroIntegrante.css"
 
-function CadastroIntegrante() {
+export default function CadastroIntegrante() {
   // Definindo estado local para os valores do formulário
   const [nome, setNome] = useState('');
   const [franquia, setFranquia] = useState('');
@@ -37,34 +37,36 @@ function CadastroIntegrante() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Nome:</label>
-        <input
-          type="text"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Franquia:</label>
-        <input
-          type="text"
-          value={franquia}
-          onChange={(e) => setFranquia(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Função:</label>
-        <input
-          type="text"
-          value={funcao}
-          onChange={(e) => setFuncao(e.target.value)}
-        />
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
+    <div className='formspace'>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Nome:</label>
+              <input
+                placeholder='Insira o nome...'
+                type="text"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+              />
+            </div>
+            <div>
+              <label>Franquia:</label>
+              <select
+                value={franquia}
+                onChange={(e) => setFranquia(e.target.value)}
+              >
+                <option value="League of Legends">League of Legends</option>
+              </select>
+            </div>
+            <div>
+              <label>Função:</label>
+              <input
+                type="text"
+                value={funcao}
+                onChange={(e) => setFuncao(e.target.value)}
+              />
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+    </div>
   );
 }
-
-export default CadastroIntegrante;
