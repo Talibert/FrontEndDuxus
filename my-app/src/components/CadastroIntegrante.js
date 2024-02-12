@@ -5,12 +5,18 @@ import "../Styles/CadastroIntegrante.css"
 export default function CadastroIntegrante() {
   // Definindo estado local para os valores do formulário
   const [nome, setNome] = useState('');
-  const [franquia, setFranquia] = useState('');
-  const [funcao, setFuncao] = useState('');
+  const [franquia, setFranquia] = useState('CBLol');
+  const [funcao, setFuncao] = useState('Top Laner');
 
   // Função para lidar com o envio do formulário
   const handleSubmit = async (event) => {
     event.preventDefault(); // Evitar o comportamento padrão de recarregar a página
+
+    // Verifica se o usuário colocou o nome
+    if (nome =="") {
+      alert("Por favor, insira o nome do integrante.");
+      return
+    }
 
     try {
       // Dados a serem enviados para a API
@@ -54,16 +60,25 @@ export default function CadastroIntegrante() {
                 value={franquia}
                 onChange={(e) => setFranquia(e.target.value)}
               >
-                <option value="League of Legends">League of Legends</option>
+                <option value="CBLol">CBLol</option>
+                <option value="LCK">LCK</option>
+                <option value="LPL">LPL</option>
+                <option value="LCS">LCS</option>
+                <option value="LEC">LEC</option>
               </select>
             </div>
             <div>
               <label>Função:</label>
-              <input
-                type="text"
-                value={funcao}
-                onChange={(e) => setFuncao(e.target.value)}
-              />
+              <select
+                value={franquia}
+                onChange={(e) => setFranquia(e.target.value)}
+              >
+                <option value="Top Laner">Top Laner</option>
+                <option value="Jungler">Jungler</option>
+                <option value="Mid Laner">Mid Laner</option>
+                <option value="AD Carry">AD Carry</option>
+                <option value="Support">Support</option>
+              </select>
             </div>
             <button type="submit">Enviar</button>
           </form>

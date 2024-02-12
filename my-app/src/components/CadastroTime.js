@@ -40,6 +40,25 @@ export default function CadastroTime() {
   // Função chamada quando o botão "enviar" é apertado
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Verifica se o usuário colocou o nome
+    if (nomeTime =="") {
+      alert("Por favor, insira o nome do time.");
+      return
+    }
+
+    // Verifica se o usuário selecionou a data
+    if (dataSelecionada == "") {
+      alert("Por favor, insira a data.");
+      return
+    }
+
+    // Verifica se o usuário selecionou exatamente 5 opções
+    if (integrantesSelecionados.length !== 5) {
+      alert("Por favor, selecione exatamente 5 opções.");
+      return;
+    }
+
     // Dados a serem enviados para a API
     const dados = {
       nome: nomeTime,
