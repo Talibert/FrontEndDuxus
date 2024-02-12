@@ -8,6 +8,9 @@ export default function CadastroIntegrante() {
   const [franquia, setFranquia] = useState('CBLol');
   const [funcao, setFuncao] = useState('Top Laner');
 
+  console.log(franquia);
+  console.log(funcao);
+
   // Função para lidar com o envio do formulário
   const handleSubmit = async (event) => {
     event.preventDefault(); // Evitar o comportamento padrão de recarregar a página
@@ -15,6 +18,16 @@ export default function CadastroIntegrante() {
     // Verifica se o usuário colocou o nome
     if (nome =="") {
       alert("Por favor, insira o nome do integrante.");
+      return
+    }
+
+    if (franquia =="") {
+      alert("escolha a franquia")
+      return
+    }
+
+    if (funcao =="") {
+      alert("escolha a função")
       return
     }
 
@@ -34,8 +47,6 @@ export default function CadastroIntegrante() {
       
       // Limpar os campos do formulário após o envio bem-sucedido
       setNome('');
-      setFranquia('');
-      setFuncao('');
     } catch (erro) {
       // Exibindo erro, caso ocorra
       console.error('Erro ao enviar dados para API:', erro);
@@ -70,8 +81,8 @@ export default function CadastroIntegrante() {
             <div>
               <label>Função:</label>
               <select
-                value={franquia}
-                onChange={(e) => setFranquia(e.target.value)}
+                value={funcao}
+                onChange={(e) => setFuncao(e.target.value)}
               >
                 <option value="Top Laner">Top Laner</option>
                 <option value="Jungler">Jungler</option>
