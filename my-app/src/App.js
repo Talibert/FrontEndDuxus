@@ -17,6 +17,7 @@ function App() {
           <Route path="/duxus" element={<Hero />}/>
           <Route path="/duxus/integrante/cadastro" element={<CadastroIntegrante />} />
           <Route path="/duxus/time/cadastro" element={<CadastroTime />} />
+          
         </Routes>
       </Router>
       <Footer/>
