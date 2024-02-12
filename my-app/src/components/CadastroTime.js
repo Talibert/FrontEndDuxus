@@ -59,30 +59,6 @@ export default function CadastroTime() {
       return;
     }
 
-    // inicia um objeto para armazenar a quantidade de jogadores por função
-    const integrantesPorFuncao = {
-      'Top Laner': [],
-      'Jungler': [],
-      'Mid Laner': [],
-      'AD Carry': [],
-      'Support': []
-    };
-  
-    // Percorre os integrantes e adiciona se a função for igual ao nome do atributo
-    integrantesSelecionados.forEach(id => {
-      const funcao = integrantes[id].funcao;
-      integrantesPorFuncao[funcao].push(id);
-    });
-  
-    // Verifica quantas funções estão selecionadas
-    const funcoesSelecionadas = Object.keys(integrantesPorFuncao).filter(funcao => integrantesPorFuncao[funcao].length > 0);
-  
-    // Verifica cinco funções foram selecionadas
-    if (funcoesSelecionadas.length !== 5) {
-      alert("Por favor, selecione um integrante de cada função.");
-      return;
-    }
-
     // Dados a serem enviados para a API
     const dados = {
       nome: nomeTime,
