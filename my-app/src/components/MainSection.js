@@ -42,7 +42,7 @@ export default function MainSection() {
                 </Link>
             </div>
             <div className="requisiçãoSection">
-                <Link to="/duxus/time/teste5" className='link'>
+                <Link to="/duxus/time/contagemfranquia" className='link'>
                     <RequisiçãoCard title="Contagem por Franquia" description="Retorne a contagem de franquias no período desejado."/>
                 </Link>
             </div>
