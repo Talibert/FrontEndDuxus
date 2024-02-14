@@ -56,7 +56,7 @@ export default function ContagemPorFranquia() {
                 </form>
             </div>
             <div className="resultadosection">
-                {contagemFranquia.length === 0 ? (
+                {Object.entries(contagemFranquia).length === 0 ? (
                     <h1 className="placeholder">Retorne a contagem de franquias de acordo com período desejado. Se não selecionar data inicial ou final, será considerada a data mínima e máxima.</h1>
                     ) : (
                         <div>

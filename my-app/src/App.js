@@ -11,6 +11,7 @@ import TimeMaisComum from "./components/TimeMaisComum";
 import FunçãoMaisComum from "./components/FunçãoMaisComum";
 import FranquiaMaisFamosa from "./components/FranquiaMaisFamosa";
 import ContagemPorFranquia from "./components/ContagemPorFranquia";
+import ContagemPorFunção from "./components/ContagemPorFunção";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/duxus/time/funcaomaiscomum" element={<FunçãoMaisComum />} />
           <Route path="/duxus/time/franquiamaisfamosa" element={<FranquiaMaisFamosa />} />
           <Route path="/duxus/time/contagemfranquia" element={<ContagemPorFranquia />} />
+          <Route path="/duxus/time/contagemfuncao" element={<ContagemPorFunção />} />
         </Routes>
       </Router>
     </div>
