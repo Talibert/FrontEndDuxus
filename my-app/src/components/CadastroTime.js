@@ -5,13 +5,13 @@ import "../Styles/CadastroTime.css"
 export default function CadastroTime() {
     // Definindo estado local para os valores do formulário
   const [integrantes, setIntegrantes] = useState({});
-  const [nomeTime, setNomeTime] = useState('');
-  const [dataSelecionada, setDataSelecionada] = useState('');
+  const [nome, setNomeTime] = useState('');
+  const [data, setDataSelecionada] = useState('');
   const [integrantesSelecionados, setIntegrantesSelecionados] = useState([]);
 
   // Será executado apenas uma vez, ao carregar a página
   useEffect(() => {
-    // Fazer a solicitação para a API ao montar o componente
+    // Fazer a solicitação GET para a API ao montar o componente
     axios.get('http://localhost:8080/duxus/time/cadastro')
       // Se obtiver resposta da API, passa como argumento para setIngrantes
       .then(response => {
@@ -42,13 +42,13 @@ export default function CadastroTime() {
     event.preventDefault();
 
     // Verifica se o usuário colocou o nome
-    if (nomeTime =="") {
+    if (nome =="") {
       alert("Por favor, insira o nome do time.");
       return
     }
 
     // Verifica se o usuário selecionou a data
-    if (dataSelecionada == "") {
+    if (data == "") {
       alert("Por favor, insira a data.");
       return
     }
@@ -61,8 +61,8 @@ export default function CadastroTime() {
 
     // Dados a serem enviados para a API
     const dados = {
-      nome: nomeTime,
-      data: dataSelecionada,
+      nome,
+      data,
       integrantesID: integrantesSelecionados
     };
 
@@ -87,7 +87,7 @@ export default function CadastroTime() {
           <input
             type="text"
             placeholder='Insira o nome do time...'
-            value={nomeTime}
+            value={nome}
             onChange={(e) => setNomeTime(e.target.value)}
           />
         </div>
@@ -96,7 +96,7 @@ export default function CadastroTime() {
           <input
             className='datainput'
             type="date"
-            value={dataSelecionada}
+            value={data}
             onChange={(e) => setDataSelecionada(e.target.value)}
           />
         </div>
@@ -113,6 +113,7 @@ export default function CadastroTime() {
                   checked={integrantesSelecionados.includes(id)} 
                 />
                 <span className="customcheckbox"></span>
+                {/*vai mostrar o nome e a função do integrante no checkbox*/}
                 {integrantes[id].nome} - {integrantes[id].funcao}
               </label>
             </div>
