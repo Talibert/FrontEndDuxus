@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
-import "../Styles/TimeDaData.css"
+import "../Styles/ComponentesDataDupla.css"
 
 export default function IntegranteMaisUsado() {
     const [dataInicial, setDataInicialSelecionada] = useState('');
@@ -31,7 +31,7 @@ export default function IntegranteMaisUsado() {
   };
 
     return(
-        <div className="timenadatasection">
+        <div className="dadossection">
             <div className='formspace'>
                 <form onSubmit={handleSubmit}>
                     <div className='datatime'>
@@ -55,8 +55,14 @@ export default function IntegranteMaisUsado() {
                     <button type="submit">Enviar</button>
                 </form>
             </div>
-            <div className="resultadotime">
-                    <h1 className="placeholder">{integranteMaisUsado["Integrante Mais Usado"]}</h1>
+            <div className="resultadosection">
+                {integranteMaisUsado.length === 0 ? (
+                    <h1 className="placeholder">Retorne o integrante mais usado de acordo com período desejado. Se não selecionar data inicial ou final, será considerada a data mínima e máxima.</h1>
+                    ) : (
+                    <div>
+                        <h1 className="integrantemaisusado">{integranteMaisUsado["Integrante Mais Usado"]}</h1>
+                    </div>
+                )}
             </div>
         </div>
         

@@ -5,9 +5,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CadastroIntegrante from "./components/CadastroIntegrante";
 import CadastroTime from "./components/CadastroTime";
-import Footer from "./components/Footer";
 import TimeDaData from "./components/TimeDaData";
 import IntegranteMaisUsado from "./components/IntegranteMaisUsado";
+import TimeMaisComum from "./components/TimeMaisComum";
+import FunçãoMaisComum from "./components/FunçãoMaisComum";
+import FranquiaMaisFamosa from "./components/FranquiaMaisFamosa";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
           <Route path="/duxus/time/cadastro" element={<CadastroTime />} />
           <Route path="/duxus/time/timenadata" element={<TimeDaData />} />
           <Route path="/duxus/integrante/integrantemaisusado" element={<IntegranteMaisUsado />} />
+          <Route path="/duxus/time/timemaiscomum" element={<TimeMaisComum />} />
+          <Route path="/duxus/time/funcaomaiscomum" element={<FunçãoMaisComum />} />
+          <Route path="/duxus/time/franquiamaisfamosa" element={<FranquiaMaisFamosa />} />
         </Routes>
       </Router>
     </div>

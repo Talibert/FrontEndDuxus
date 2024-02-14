@@ -27,18 +27,18 @@ export default function MainSection() {
                 </Link>
             </div>
             <div className="requisiçãoSection">
-                <Link to="/duxus/time/teste3" className='link'>
+                <Link to="/duxus/time/timemaiscomum" className='link'>
                     <RequisiçãoCard title="Time mais Comum" description="Retorne o time mais comum no período desejado."/>
                 </Link>
             </div>
             <div className="requisiçãoSection">
-                <Link to="/duxus/time/teste4" className='link'>
+                <Link to="/duxus/time/funcaomaiscomum" className='link'>
                     <RequisiçãoCard title="Função mais Comum" description="Retorne a função mais comum no período desejado."/>
                 </Link>
             </div>
             <div className="requisiçãoSection">
-                <Link to="/duxus/time/teste5" className='link'>
-                    <RequisiçãoCard title="Franquia mais Famosa" description="Retorne a função mais comum no período desejado."/>
+                <Link to="/duxus/time/franquiamaisfamosa" className='link'>
+                    <RequisiçãoCard title="Franquia mais Famosa" description="Retorne a franquia mais famosa no período desejado."/>
                 </Link>
             </div>
             <div className="requisiçãoSection">
