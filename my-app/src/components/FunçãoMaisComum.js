@@ -6,6 +6,7 @@ export default function FunçãoMaisComum() {
     const [dataInicial, setDataInicialSelecionada] = useState('');
     const [dataFinal, setDataFinalSelecionada] = useState('');
     const [funcaoMaisComum, setfuncaoMaisComum] = useState([]);
+    const [erro, setErro] = useState('');
     
       // Função para lidar com o envio do formulário
     const handleSubmit = async (event) => {
@@ -25,14 +26,19 @@ export default function FunçãoMaisComum() {
       setDataInicialSelecionada('');
       setDataFinalSelecionada('');
     } catch (erro) {
-      // Exibindo erro, caso ocorra
+      // Exibindo popup de erro na tela e no console
       console.error('Erro ao enviar dados para API:', erro);
+      setErro('Erro ao enviar dados para a API. Tente novamente mais tarde.');
+        setTimeout(() => {
+          setErro('');
+        }, 2000);
     }
   };
 
     return(
         <div className="dadossection">
             <div className='formspace'>
+            {erro && <div className="popup">{erro}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className='datatime'>
                             <label>Data Inicial:</label>

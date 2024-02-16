@@ -6,6 +6,7 @@ export default function TimeDaData() {
     const [data, setDataSelecionada] = useState('');
     const [timeNome, setNomeTime] = useState('');
     const [integrantes, setIngrantes] = useState([]);
+    const [erro, setErro] = useState('');
     
       // Função para lidar com o envio do formulário
     const handleSubmit = async (event) => {
@@ -37,14 +38,19 @@ export default function TimeDaData() {
       // Limpar os campos do formulário após o envio bem-sucedido
       setDataSelecionada('');
     } catch (erro) {
-      // Exibindo erro, caso ocorra
+      // Exibindo popup de erro na tela e no console
       console.error('Erro ao enviar dados para API:', erro);
+      setErro('Erro ao enviar dados para a API. Tente novamente mais tarde.');
+        setTimeout(() => {
+          setErro('');
+        }, 2000);
     }
   };
 
     return(
         <div className="timenadatasection">
             <div className='formspace'>
+              {erro && <div className="popup">{erro}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className='datatime'>
                             <label>Data:</label>
@@ -71,7 +77,5 @@ export default function TimeDaData() {
                 )}
             </div>
         </div>
-        
-        
     )
 } 

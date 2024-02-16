@@ -8,6 +8,7 @@ export default function CadastroTime() {
   const [nome, setNomeTime] = useState('');
   const [data, setDataSelecionada] = useState('');
   const [integrantesSelecionados, setIntegrantesSelecionados] = useState([]);
+  const [erro, setErro] = useState('');
 
   // Será executado apenas uma vez, ao carregar a página
   useEffect(() => {
@@ -74,13 +75,19 @@ export default function CadastroTime() {
         setDataSelecionada('');
         setIntegrantesSelecionados([]);
       })
+      // Exibindo popup de erro na tela e no console
       .catch(error => {
         console.error('Erro ao enviar dados para a API:', error);
+        setErro('Erro ao enviar dados para a API. Tente novamente mais tarde.');
+        setTimeout(() => {
+          setErro('');
+        }, 2000);
       });
   };
 
   return (
     <div className='formspace'>
+      {erro && <div className="popup">{erro}</div>}
       <form onSubmit={handleSubmit}>
         <div className='nometime'>
           <label>Nome do Time:</label>

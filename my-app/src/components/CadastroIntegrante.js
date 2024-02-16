@@ -7,6 +7,7 @@ export default function CadastroIntegrante() {
   const [nome, setNome] = useState('');
   const [franquia, setFranquia] = useState('CBLol');
   const [funcao, setFuncao] = useState('Top Laner');
+  const [erro, setErro] = useState('');
 
   console.log(franquia);
   console.log(funcao);
@@ -48,13 +49,18 @@ export default function CadastroIntegrante() {
       // Limpar os campos do formulário após o envio bem-sucedido
       setNome('');
     } catch (erro) {
-      // Exibindo erro, caso ocorra
+      // Exibindo popup de erro na tela e no console
       console.error('Erro ao enviar dados para API:', erro);
+      setErro('Erro ao enviar dados para a API. Tente novamente mais tarde.');
+        setTimeout(() => {
+          setErro('');
+        }, 2000);
     }
   };
 
   return (
     <div className='formspace'>
+      {erro && <div className="popup">{erro}</div>}
           <form onSubmit={handleSubmit}>
             <div>
               <label>Nome:</label>
