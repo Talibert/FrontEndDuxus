@@ -29,3 +29,8 @@ body {
     font-family: 'Roboto Italic';
     src: url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Beaufort Heavy';
+    src: url('../fonts/BeaufortforLOL-Heavy.ttf') format('truetype');
+}

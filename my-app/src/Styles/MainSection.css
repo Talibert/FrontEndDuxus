@@ -20,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 2vh;
+    background-color: aqua;
 }
 
 .requisiçãoSection {

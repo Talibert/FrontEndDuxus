@@ -30,8 +30,9 @@ header .mid {
 
 header .mid h1  {
     padding-left: 2vw;
-    font-size: 5vh;
+    font-size: 6vh;
     color: #a57d18;
+    font-family: 'Beaufort Heavy', sans-serif;
 }
 
 header .mid img {

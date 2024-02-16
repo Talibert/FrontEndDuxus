@@ -9,7 +9,7 @@
     align-items: center;
     border: 1px solid #a57d18;
     width: 35vw;
-    min-height: 20vh;
+    height: 100%;
     padding: 1vw;
     border-radius: 2vw;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);

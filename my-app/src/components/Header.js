@@ -6,7 +6,7 @@ export default function Header() {
             <div className="top"></div>
             <div className="mid">
                 <h1>CartoLOL</h1>
-                <img src=".assets/lol.png" alt="lol logo"></img>
+                <img src={`${process.env.PUBLIC_URL}/assets/lol.png`} alt="lol logo"></img>
             </div> 
             <div className="bot"></div>
         </header>

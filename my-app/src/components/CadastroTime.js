@@ -112,9 +112,9 @@ export default function CadastroTime() {
                   onChange={handleCheckboxChange} 
                   checked={integrantesSelecionados.includes(id)} 
                 />
-                <span className="customcheckbox"></span>
-                {/*vai mostrar o nome e a função do integrante no checkbox*/}
-                {integrantes[id].nome} - {integrantes[id].funcao}
+                  <span className="customcheckbox"></span>
+                  {/*vai mostrar o nome, a função e franquia do integrante no checkbox*/}
+                  {integrantes[id].nome} / {integrantes[id].funcao} / {integrantes[id].franquia}
               </label>
             </div>
           ))}
